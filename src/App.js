@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import CharacterList from "./components/CharacterList";
 import UseFetch from './hooks/UseFetch';
+import './index.css';
 
 
 const App = () => {
@@ -39,14 +40,15 @@ const App = () => {
     fetchCharacters(url); 
   }, [url]);
 
-  return (
+return (
     <>
       <Navbar brand="Rick and Morty App" />
-      <div className="container py-5">
+      <div className="containerf py-5">
         <nav>        
           <ul className="pagination justify-content-center">
             <form>
                 <input
+                      className="insertTxt"
                       type = "text"
                       value={ search }
                       onChange={ inputChange }
@@ -88,11 +90,12 @@ const App = () => {
                     )
       }
 
-      <div className="container pb-5">
+      <div className="containerf pb-5">
         <nav>
           <ul className="pagination justify-content-center">
             <form>
               <input
+                    className="insertTxt"
                     type = "text"
                     value={ search }
                     onChange={ inputChange }
